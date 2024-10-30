@@ -8,6 +8,7 @@ class SingleLinkedList {
     // Узел списка
     struct Node {
         Node() = default;
+
         Node(const Type &val, Node *next)
                 : value(val), next_node(next) {
         }
@@ -32,9 +33,11 @@ public:
             --size_;
         }
     }
+
     SingleLinkedList() {
         size_ = 0;
     };
+
     SingleLinkedList(std::initializer_list<Type> values) {
         SingleLinkedList temp;
         for (auto it = rbegin(values); it < rend(values); ++it) {
@@ -291,9 +294,9 @@ public:
 
 template<typename Type>
 void swap(SingleLinkedList<Type> &lhs, SingleLinkedList<Type> &rhs) noexcept {
-lhs.swap(rhs);
+    lhs.swap(rhs);
 }
-
+//
 template<typename Type>
 bool operator==(const SingleLinkedList<Type> &lhs, const SingleLinkedList<Type> &rhs) {
     return std::equal(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());;
