@@ -2,6 +2,7 @@
 
 #include "single-linked-list.h"
 
+
 // Эта функция проверяет работу класса SingleLinkedList
 void Test() {
     struct DeletionSpy {
